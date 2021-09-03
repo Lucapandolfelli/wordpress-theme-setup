@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * The archive file
+ * The WooCommerce archive
  * 
  * 
  * @package WordpressTheme
