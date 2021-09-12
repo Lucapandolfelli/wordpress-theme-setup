@@ -7,10 +7,6 @@
  * @package WordpressTheme
  * @since 1.0.0
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,4 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
+<?php wp_body_open(); ?>
     
+<div id="page" class="site">
+    <div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">

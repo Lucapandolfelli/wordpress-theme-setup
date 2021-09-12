@@ -7,11 +7,16 @@
  * @package WordpressTheme
  * @since 1.0.0
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
 ?>
+			</main>
+		</div>
+	</div>
+
+	<footer class="site-footer" role="contentinfo">
+
+	</footer>
+
+</div>
 
 <?php wp_footer(); ?>
 
