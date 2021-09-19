@@ -17,10 +17,22 @@
 
 	</header>
 
+    <div class="entry-meta">
+
+        <?php wordpress_theme_entry_meta(); ?>
+
+    </div>
+
     <div class="entry-content">
 
         <?php the_content(); ?>
 
     </div>
+
+    <footer class="entry-footer">
+
+        <?php wordpress_theme_entry_footer(); ?>
+
+    </footer>
 
 </article>

@@ -27,7 +27,6 @@
 
 	<div class="entry-meta">
 
-		<?php wordpress_theme_posted_on(); ?>
 		<?php wordpress_theme_entry_meta(); ?>
 
 	</div>

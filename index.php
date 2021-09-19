@@ -25,7 +25,11 @@ get_header();
 
 		<?php get_template_part('template-parts/content/content'); ?>
 
-	<?php endwhile; else: ?>
+	<?php endwhile; ?>
+
+		<?php wordpress_theme_the_posts_navigation(); ?>
+
+	<?php else: ?>
 
 		<?php get_template_part('template-parts/content/content-none'); ?>
 

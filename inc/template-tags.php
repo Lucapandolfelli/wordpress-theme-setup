@@ -37,6 +37,8 @@ if(! function_exists('wordpress_theme_entry_meta')){
 
 	function wordpress_theme_entry_meta(){
 
+		wordpress_theme_posted_on();
+
 		if(has_category() || has_tag()){
 
 			echo '<div class="post-taxonomies">';
@@ -60,6 +62,7 @@ if(! function_exists('wordpress_theme_entry_meta')){
 					'<span class="tags-links">' . esc_html__('Tagged %s','wp-theme') . '</span>',
 					$tags_list
 				);
+
 			}
 
 			echo '</div>';
@@ -80,6 +83,17 @@ if(! function_exists('wordpress_theme_entry_footer')){
 			
 		}
 
+	}
+
+}
+
+if(! function_exists('wordpress_theme_the_posts_navigation')){
+
+	function wordpress_theme_the_posts_navigation(){
+
+		echo '<div class="nav-previous alignleft">' . previous_posts_link(__('<- Newer posts', 'wp-theme')) . '</div>';
+		echo '<div class="nav-next alignright">' . next_posts_link(__('Older posts ->', 'wp-theme')) .'</div>';
+		
 	}
 
 }

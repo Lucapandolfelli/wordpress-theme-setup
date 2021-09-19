@@ -36,6 +36,8 @@ $description = get_the_archive_description();
 
 		<?php endwhile; ?>
 
+		<?php wordpress_theme_the_posts_navigation(); ?>
+
 	<?php else: ?>
 
 		<?php get_template_part('template-parts/content/content-none'); ?>
