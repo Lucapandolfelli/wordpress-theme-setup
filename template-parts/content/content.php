@@ -19,16 +19,27 @@
 
 		<?php else: ?>
 
-			<?php the_title(sprintf('<h2 class="entry-title"><a href="%s">', esc_url(get_permalink())),'</a></h2>' ); ?>
+			<?php the_title(sprintf('<h3 class="entry-title"><a href="%s">', esc_url(get_permalink())),'</a></h3>' ); ?>
 
 		<?php endif; ?>
 
 	</header>
 
+	<div class="entry-meta">
+
+		<?php wordpress_theme_posted_on(); ?>
+		<?php wordpress_theme_entry_meta(); ?>
+
+	</div>
+
     <div class="entry-content">
 
-        <?php the_content(); ?>
+        <?php the_excerpt(); ?>
 
     </div>
+
+	<footer class="entry-footer">
+
+	</footer>
 
 </article>

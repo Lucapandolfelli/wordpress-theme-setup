@@ -75,3 +75,5 @@ function wordpress_theme_scripts(){
 }
 add_action('wp_enqueue_scripts', 'wordpress_theme_scripts');
 
+require WORDPRESS_THEME_PATH . '/inc/template-tags.php';
+
