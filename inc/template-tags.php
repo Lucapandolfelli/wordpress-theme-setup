@@ -37,37 +37,47 @@ if(! function_exists('wordpress_theme_entry_meta')){
 
 	function wordpress_theme_entry_meta(){
 
-		if(! is_single()){
+		if(has_category() || has_tag()){
 
-			if(has_category() || has_tag()){
+			echo '<div class="post-taxonomies">';
 
-				echo '<div class="post-taxonomies">';
+			$categories_list = get_the_category_list(__(', ','wp-theme'));
 
-				$categories_list = get_the_category_list(__(', ','wp-theme'));
+			if ($categories_list){
 
-				if ($categories_list){
-
-					printf(
-						'<span class="cat-links">' . esc_html__('Categorized as %s','wp-theme') . '</span>',
-						$categories_list
-					);
-
-				}
-
-				$tags_list = get_the_tag_list('', __(', ','wp-theme'));
-
-				if ($tags_list) {
-
-					printf(
-						'<span class="tags-links">' . esc_html__('Tagged %s','wp-theme') . '</span>',
-						$tags_list
-					);
-				}
-
-				echo '</div>';
+				printf(
+					'<span class="cat-links">' . esc_html__('Categorized as %s','wp-theme') . '</span>',
+					$categories_list
+				);
 
 			}
 
+			$tags_list = get_the_tag_list('', __(', ','wp-theme'));
+
+			if ($tags_list) {
+
+				printf(
+					'<span class="tags-links">' . esc_html__('Tagged %s','wp-theme') . '</span>',
+					$tags_list
+				);
+			}
+
+			echo '</div>';
+
+		}
+
+	}
+
+}
+
+if(! function_exists('wordpress_theme_entry_footer')){
+
+	function wordpress_theme_entry_footer(){
+
+		if(! is_singular()){
+			
+			echo '<p><a href="' . esc_url( get_permalink() ) . '">' . wordpress_theme_continue_reading_text() . '</a></p>';
+			
 		}
 
 	}

@@ -40,6 +40,8 @@
 
 	<footer class="entry-footer">
 
+		<?php wordpress_theme_entry_footer(); ?>
+
 	</footer>
 
 </article>
